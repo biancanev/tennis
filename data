@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Game Stats</h2>
+
+<table>
+  <tr>
+    <th>Opponent</th>
+    <th>Match Type</th>
+    <th>Partner</th>
+    <th>Date</th>
+    <th>Win/Loss</th>
+    <th>UE</th>
+    <th>DF</th>
+    <th>Aces</th>
+    <th>Winners</th>
+  </tr>
+  <tr>
+    <td>Monte Vista</td>
+    <td>Doubles</td>
+    <td>Alan Liang</td>
+    <td>2/19/19</td>
+    <td>Loss(1-8)</td>
+    <td>1</td>
+    <td>4</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>California</td>
+    <td>Doubles</td>
+    <td>Ashwin</td>
+    <td>2/21/19</td>
+    <td>Win(9-7)</td>
+    <td>2</td>
+    <td>3</td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>SRV</td>
+    <td>Doubles</td>
+    <td>Alan Liang</td>
+    <td>2/28/19</td>
+    <td>Win(8-4)</td>
+    <td>1</td>
+    <td>1</td>
+    <td>3</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Amador</td>
+    <td>Doubles</td>
+    <td>Alan Liang</td>
+    <td>3/8/29</td>
+    <td>Loss(5-8)</td>
+    <td>3</td>
+    <td>2</td>
+    <td>0</td>
+    <td>2</td>
+</tr>
+<tr>
+    <td>Foothill</td>
+    <td>Doubles</td>
+    <td>Kevin Park</td>
+    <td>3/12/19</td>
+    <td>Win(8-6)</td>
+    <td>1</td>
+    <td>1</td>
+    <td>4</td>
+    <td>7</td>
+</tr>
+<tr>
+    <td>California</td>
+    <td>Doubles</td>
+    <td>Alan Liang</td>
+    <td>3/26/19</td>
+    <td>Loss(4-8)</td>
+    <td>3</td>
+    <td>2</td>
+    <td>2</td>
+    <td>6</td>
+</tr>
+</table>
+<h2>Overall Stats(per game)</h2>
+<table>
+  <tr>
+    <th>W-L-T</th>
+    <th>Win %</th>
+    <th>Match Type(S-D)</th>
+    <th>UE Avg.</th>
+    <th>DF Avg.</th>
+    <th>Aces Avg.</th>
+    <th>Winners Avg.</th>
+  </tr>
+  <tr>
+  	<td>3-3-0</td>
+    <td>50%</td>
+    <td>0-6</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <td>4</td>
+  </tr>
+</table>
+</body>
+</html>
