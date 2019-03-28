@@ -35,7 +35,7 @@ th {
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="https://biancanev.github.io/tennis/" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Home</a>
   <a href="https://biancanev.github.io/tennis/data" class="w3-bar-item w3-button w3-padding-large w3-theme-d3">Stats</a>
  </div>
 </div>
@@ -166,7 +166,7 @@ th {
   <tr>
   	<td class="w3-center">3-3-0</td>
     <td class="w3-center">50%</td>
-    <td class="w3-center">Doubles</td>
+    <td class="w3-center">0-6</td>
     <td class="w3-center">2</td>
     <td class="w3-center">2</td>
     <td class="w3-center">2</td>
@@ -187,16 +187,19 @@ th {
   <tr>
   	<td class="w3-center">3-3-0</td>
     <td class="w3-center">50%</td>
-    <td class="w3-center">0-6</td>
+    <td class="w3-center">Doubles</td>
     <td class="w3-center">11</td>
     <td class="w3-center">13</td>
     <td class="w3-center">11</td>
     <td class="w3-center">23</td>
   </tr>
-</table>
+</table><br>
+<hr>
+<br>
+  <div id="chart_div"></div>
 <!-- End Page Container -->
 </div>
- 
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
 <script>
 // Accordion
 function myFunction(id) {
@@ -220,6 +223,57 @@ function openNav() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawAxisTickColors);
+
+function drawAxisTickColors() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'UE');
+      data.addColumn('number', 'DF');
+      data.addColumn('number','Aces');
+      data.addColumn('number','Winners');
+
+      data.addRows([
+        [0, 0, 0, 0, 0],    [1, 1, 4, 0, 1],   [2, 2, 3, 2, 2],  [3, 1, 1, 3, 5],   [4, 3, 2, 0, 2],  [5, 1, 1, 4, 7], [6, 3, 2, 2, 6]
+      ]);
+
+      var options = {
+        hAxis: {
+          title: 'Game #',
+          textStyle: {
+            color: '#01579b',
+            fontSize: 20,
+            fontName: 'Arial',
+            bold: true,
+            italic: true
+          },
+          titleTextStyle: {
+            color: '#01579b',
+            fontSize: 16,
+            fontName: 'Arial',
+            bold: false,
+            italic: true
+          }
+        },
+        vAxis: {
+          title: 'Popularity',
+          textStyle: {
+            color: '#1a237e',
+            fontSize: 24,
+            bold: true
+          },
+          titleTextStyle: {
+            color: '#1a237e',
+            fontSize: 24,
+            bold: true
+          }
+        },
+        colors: ['#a52714', '#097138', '#0c3ec5', '#faef95']
+      };
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
 </script>
 
 </body>
